@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: restaurant
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data:/var/lib/postgresql/data

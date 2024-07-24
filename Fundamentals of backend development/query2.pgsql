@@ -1,0 +1,1 @@
+insert into accounts values(1, 'admin', 'admin', 'dan@test.com')
