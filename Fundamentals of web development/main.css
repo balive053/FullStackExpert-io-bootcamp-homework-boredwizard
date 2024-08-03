@@ -1,17 +1,120 @@
 body {
-
-    /* background-image: url('images/background.svg');
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('images/background.svg');
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat;  */
-
+    background-repeat: no-repeat; 
+    color: white;
     margin:0;
 }
 
 nav {
+    align-items: center;
     display: flex;
+    justify-content: space-between;
+    margin: 20px;
     ul {
         transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        position: fixed;
+        height: 100vh;
+        width:40%;
+        text-align: right;
+        right:0;
+        top:0;
+        list-style: none;
+        li {
+            margin: 0.8em;
+            a{
+            text-decoration-style: none;
+            color: white;
+            }
+        }
+    hamburger img {
+        margin: 20px;
+     
+    }
+    }
+}
+#checkStatusButtonID {
+    display: none;
+}
+
+/* Style for the underline in header */
+.underline {
+    position: relative;
+    display: inline-block;
+    font-size: 24px; 
+    font-weight: bold;
+}
+/* Create the line */
+.underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px; /* Adjust distance from text */
+    height: 2.4px; /* Height of the line */
+    background-color: #17C2EC;
+    width: 40%; /* Length of the line relative to the text */
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 24px;
+    h1 {
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 40px;
+        text-align: left;
+        span {
+            color: #17C2EC;
+        }
+    }
+    #preHeading {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 14.63px;
+        text-align: left;
+        color: #17C2EC;
+        }
+    #subHeading {
+        font-size: 20px;
+        font-weight: 700;
+        color:rgba(255, 255, 255, 0.7);
+
+    }
+    #hero-cta button {
+        font-size: 18px;
+        padding: 15px 30px; 
+        border-radius: 30px; 
+        border: 2px solid transparent; 
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    #getVaccine {
+        background-color: #17C2EC; 
+        color: white; 
+        border-color: #17C2EC; 
+    }
+    #helpCentre {
+        background-color: transparent; 
+        color: white; 
+        border-color: #17C2EC;
+        border-style: dashed;
+        border-radius: 30px;
+        border: 2px solid transparent
     }
 }
 
+
+
+.imageGroup {
+    display: flex;
+    flex-direction: column;
+
+}
